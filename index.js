@@ -162,8 +162,8 @@ function startOrRestartWatchdog(pm2Env) {
   // Store new watchdog to watchdogs list
   watchdogs.set(pm2Env.pm_id, watchdog);
   // Start watchdog
+  console.trace(`Process ${pm2Env.name} - watchdog restarted`);
   watchdog.start();
-  console.trace(`Process ${pm2Env.name} - watchdog started`);
 }
 
 /**
