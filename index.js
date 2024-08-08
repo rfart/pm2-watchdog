@@ -163,6 +163,7 @@ function startOrRestartWatchdog(pm2Env) {
   watchdogs.set(pm2Env.pm_id, watchdog);
   // Start watchdog
   watchdog.start();
+  console.trace(`Process ${pm2Env.name} - watchdog started`);
 }
 
 /**
